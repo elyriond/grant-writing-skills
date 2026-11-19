@@ -16,17 +16,39 @@ The coach helps you **write** the proposal. It interviews you one question at a 
 
 ## Use it
 
-**Any plan (recommended start):** create a Project in ChatGPT or Claude, or a Notebook in Copilot. Paste the text from the [`paste-ready`](paste-ready/) folder into the instructions. Upload the funder's current call documents as files. Then upload your draft and ask for a review.
+**Any plan (recommended start):** create a Project in ChatGPT or Claude. Paste the text from the [`paste-ready`](paste-ready/) folder into the instructions. Upload the funder's current call documents as files (ChatGPT Free: max. 5 files per project). Then upload your draft and ask for a review.
+
+**Copilot Chat or any other chat:** paste the text from `paste-ready/` as your first message and attach the files listed below. This lasts for one chat only.
 
 **As a skill:** download the skill folder and upload it where your plan supports skills:
-- ChatGPT: Skills / Plugins (availability depends on plan and workspace settings)
-- Claude: Settings → Capabilities → Skills (upload as ZIP)
-- Microsoft 365 Copilot: custom skills via OneDrive (requires the full Copilot licence)
+- Claude: zip the skill folder, then Customize → Skills → + → Upload a skill (all plans, code execution must be on)
+- ChatGPT: Skills → Create → Upload (Business, Enterprise, Edu; depends on workspace settings)
+- Microsoft 365 Copilot: put the folder in OneDrive under `Documents/Cowork/skills/` (requires the full Copilot licence)
+
+## Which files to attach
+
+The text from `paste-ready/` goes into the Project instructions (or your first message); it is never attached.
+
+| Use | Attach |
+|---|---|
+| A reviewer | your draft |
+| The coach | your programme's file from [`references/`](skills/grant-proposal-coach/references/) (+ `ideation.md` for idea mode); later your own material |
+
+**Also attach 1–2 official PDFs.** The skills contain a checked extract of the rules (eligibility, template, limits, criteria, AI rules), not the full documents. Uploaded documents override the skill, and it names any difference.
+
+| Programme | Recommended PDFs |
+|---|---|
+| ERC Starting Grant | [Information for Applicants StG/CoG](https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/information-for-applicants_he-erc-stg-cog_en.pdf); optionally the [Work Programme](https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2027/wp_horizon-erc-2027_en.pdf) (long) |
+| DFG Sachbeihilfe | 54.01 (guidelines) and 53.01 (project description template) from the [DFG forms page](https://www.dfg.de/de/foerderung/foerdermoeglichkeiten/programme/einzelfoerderung/sachbeihilfe/formulare-merkblaetter) |
+| DFG Emmy Noether | 50.02 (programme guidelines) and 53.05 (project description template) from the [DFG forms page](https://www.dfg.de/en/research-funding/funding-opportunities/programmes/individual/emmy-noether/forms-guidelines) |
+| Humboldt Feodor Lynen | [Programme information](https://www.humboldt-foundation.de/fileadmin/Bewerben/Programme/Feodor-Lynen-Forschungsstipendium/lynen-fellowship_programme_information_e.pdf) |
+
+Long PDFs are searched in pieces rather than read in full, so details can be missed: keep the reference file even when you attach the PDFs. ChatGPT Free allows 5 files per Project; reference file, `ideation.md`, two PDFs and your draft fit exactly.
 
 ## How to use the coach
 
 - **As a skill:** upload the whole `skills/grant-proposal-coach` folder (as a ZIP), including `references/`. The coach loads the reference file for your programme by itself.
-- **In a Project or Notebook:** paste [`paste-ready/grant-proposal-coach.md`](paste-ready/grant-proposal-coach.md) into the instructions and upload the reference file for your programme (plus `ideation.md` for idea mode) from [`skills/grant-proposal-coach/references/`](skills/grant-proposal-coach/references/) as a Project file, ideally together with the funder's current call documents. Without a reference file the coach asks for one before it states any limits or rules.
+- **In a Project:** paste [`paste-ready/grant-proposal-coach.md`](paste-ready/grant-proposal-coach.md) into the instructions and upload the reference file for your programme (plus `ideation.md` for idea mode) from [`skills/grant-proposal-coach/references/`](skills/grant-proposal-coach/references/) as a Project file, ideally together with the funder's current call documents. Without a reference file the coach asks for one before it states any limits or rules.
 - Start with "I want to write a proposal". Answer in your own words; short answers are fine. When the draft is finished, run the matching reviewer on it in a new chat.
 - DFG requires you to disclose the use of generative AI in the proposal. ERC and Humboldt currently do not. The coach reminds you at the end.
 
